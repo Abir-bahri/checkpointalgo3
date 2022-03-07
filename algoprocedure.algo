@@ -1,0 +1,32 @@
+PROCEDURE dot_product(var array v1: ARRAY_OF FLOAT[5],
+                          array v2: ARRAY_OF FLOAT[5])  
+                            
+BEGIN
+  for i from 0 to v1.length do
+     for j from 0 to v2.length do
+         ps := ps + ( v1(i) * v2(j) );
+     end_for
+   end_for   
+   write(ps);   
+END
+ALGORITHM Dot product
+VAR
+    i,j,ps: integer=0;
+    n:integer;
+BEGIN
+v1=[3,4,1,2];
+v2=[5,1,3,1];
+write( dot_product( v1, v2) )
+write ("enter n")
+read (n)
+for i from 1 to n do
+ read(v[i])
+end_for
+for i from 1 to n do
+   for j from 1 to n do 
+       if (dot_product( v[i], v[j])=0) then
+           write (v[i] "and" v[j] "are orthogonal")
+       end_if
+    end_for
+end_for           
+END
